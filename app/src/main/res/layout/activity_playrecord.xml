@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ruiz.karaokay.Playrecord">
+
+    <TextView
+        android:id="@+id/txtnowplaying"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Now Playing....."
+        android:layout_margin="20px"
+        android:textSize="30px"
+        android:background="@color/colorAccent"
+        />
+    <LinearLayout
+        android:id="@+id/pnllist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10px"
+        android:background="#ffff"
+        android:layout_below="@+id/txtnowplaying"
+        android:foregroundTint="@color/colorAccent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10px"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="80px"
+            android:layout_height="80px"
+            android:padding="10px"
+            android:src="@drawable/listitem" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="20"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblsongrecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unknown Songs"
+                    android:textColor="#121212"
+                    android:textSize="30px"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:freezesText="true"
+                    android:scrollHorizontally="true"
+                    android:transitionName="@string/appbar_scrolling_view_behavior"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnclose"
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        android:text="CLOSE"
+        android:gravity="center"
+        android:layout_margin="20px"
+        android:layout_below="@id/pnllist"
+        android:textColor="#fff"
+        android:background="@color/colorPrimary"
+        />
+
+</RelativeLayout>
